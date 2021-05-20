@@ -5,11 +5,10 @@ pipeline {
 				steps {
 					/*sh '''
 						echo "Step One"
-					''' */
+					'''*/
 					script {
 						env.EXECUTE="True"
 					}
-
 				}
 			}
 
@@ -19,11 +18,9 @@ pipeline {
 					${EXECUTE}="True"
 					}
 				steps {
-
 					sh '''
 						echo "Updating Second Stage"
-					'''}
-					
+					'''
 				}
 			} 
 
@@ -36,4 +33,5 @@ pipeline {
 			}
 		}
 }
+
 
