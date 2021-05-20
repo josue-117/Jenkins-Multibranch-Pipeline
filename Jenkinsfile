@@ -16,7 +16,7 @@ pipeline {
 
 			stage('Second') {
 				when {
-						EXECUTE 'True'
+					${EXECUTE}="True"
 					}
 				steps {
 
