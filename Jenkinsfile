@@ -24,13 +24,13 @@ pipeline {
 				}
 			} 
 
-			stage('Three') {
+			stage('Third') {
 				when {
-					environment name: 'EXECUTE', value: 'true'
+					environment name: 'EXECUTE', value: 'false'
 					}
 				steps {
 					sh '''
-						echo "Step Hello"
+						echo "Step Three"
 					'''
 				}
 			}
