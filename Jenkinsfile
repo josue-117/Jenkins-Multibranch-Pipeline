@@ -30,7 +30,7 @@ pipeline {
 					}
 				steps {
 					sh '''
-						echo "Step Three"
+						echo "Step Three or Third"
 					'''
 				}
 			}
