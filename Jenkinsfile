@@ -7,7 +7,7 @@ pipeline {
 						echo "Step One"
 					'''*/
 					script {
-						env.EXECUTE="True"
+						env.EXECUTE='true'
 					}
 				}
 			}
@@ -15,7 +15,7 @@ pipeline {
 
 			stage('Second') {
 				when {
-					${EXECUTE}==true
+					environment name: 'EXECUTE', value: 'true'
 					}
 				steps {
 					sh '''
@@ -25,6 +25,9 @@ pipeline {
 			} 
 
 			stage('Third') {
+				when {
+					environment name: 'EXECUTE', value: 'false'
+					}
 				steps {
 					sh '''
 						echo "Step Three"
