@@ -19,7 +19,7 @@ pipeline {
 					}
 				steps {
 					sh '''
-						echo "Updating Second Stage"
+						echo "Hello from Test Branch"
 					'''
 				}
 			} 
